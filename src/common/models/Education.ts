@@ -1,10 +1,10 @@
-export interface Experience {
-    role: string;
-    company: string;
+export interface Education {
+    degree: string;
+    college: string;
+    fieldOfStudy: string;
     location: Location;
     from: TimePeriod;
     to: TimePeriod | null;
-    description: string[];
 }
 
 export interface Location {

@@ -1,11 +1,11 @@
 import './App.css';
-import HomeScreen from './screens/homeScreen';
+import LandingScreen from './screens/landingScreen';
 // import { DarkThemeBg, DarkThemeBorder } from './common/utilities/styles';
 
 function App() {
   return (
     <div>
-      <HomeScreen />
+      <LandingScreen />
     </div>
   );
 }

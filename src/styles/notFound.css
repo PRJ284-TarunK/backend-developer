@@ -1,0 +1,15 @@
+.not-found {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #01257D;
+  background-size: 300% 100%;
+}
+
+.not-found-banner {
+  margin-top: 5%;
+  width: 40%;
+  height: 40%;
+}

@@ -1,6 +1,6 @@
 .profile-frame {
-    width: 300px;              /* adjust size */
-    height: 300px;
+    width: 500px;              /* adjust size */
+    height: 500px;
     border-radius: 50%;
     padding: 5px;             /* grey outer border thickness */
     background: #00FFFF;       /* soft grey outer ring */

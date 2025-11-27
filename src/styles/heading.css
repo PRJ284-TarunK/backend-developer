@@ -1,0 +1,47 @@
+.section-heading {
+    /* text-align: center; */
+    width: 100%;
+    margin: 60px auto;
+}
+
+/* --- Wavy Gradient Text --- */
+.wavy-text {
+    font-size: 32px;
+    font-weight: bold;
+    background: repeating-linear-gradient(
+        90deg,
+        #01257D,
+        #00FFFF,
+        #01257D,
+        #00FFFF
+    );
+    background-size: 400% 100%;
+    animation: waveSync 3s linear infinite;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Wavy Line --- */
+.wavy-line {
+    width: 80%;
+    height: 3px;
+    margin: 16px auto;
+    border-radius: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        #01257D,
+        #00FFFF,
+        #01257D,
+        #00FFFF
+    );
+    background-size: 400% 100%;
+    animation: waveSync 3s linear infinite;
+    background-repeat: repeat;
+}
+
+/* --- Single Keyframe for Both --- */
+@keyframes waveSync {
+    0% { background-position: 0% 0; }
+    100% { background-position: 100% 0; }
+}

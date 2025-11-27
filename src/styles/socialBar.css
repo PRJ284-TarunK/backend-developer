@@ -1,0 +1,39 @@
+.vertical-social-bar {
+    position: fixed;
+    bottom: 0; /* distance from bottom */
+    left: 40px;   /* distance from left */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #01257d;
+    z-index: 1000;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* space between icons */
+    margin-bottom: 10px; /* distance from line */
+    background-color: #01257d;
+}
+
+.social-icon {
+    color: #00FFFF;
+    background-color: #01257d;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    color: white;
+    transform: translateY(-3px);
+    background-color: #01257d;
+}
+
+/* Vertical line */
+.vertical-line {
+    width: 2px;
+    height: 120px; /* adjust height as needed */
+    background-color: #00FFFF;
+    opacity: 0.6;
+}

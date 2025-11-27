@@ -1,45 +1,46 @@
 import "../common/styles/themedBg.css";
 import "../common/styles/themedBorder.css";
 import "../styles/hero.css";
-import Profile from "../components/profilePhoto";
-import { Palette1 } from "../common/colors";
-import ExperienceItem from "../components/experienceItem";
+import ExperienceCard from "../components/experienceCard";
+import NavBar from "../components/navbar";
+import { fetchEducationData, fetchExperienceData } from "../common/services/dataServices";
+import Heading from "../components/heading";
+import Hero from "../components/hero";
+import EducationCard from "../components/educationCard";
+
 
 function HomeScreen() {
+
     return (
         <div>
-            <div className="moving-section">
-                <div
-                    style={{
-                        flexDirection: "column",
-                        backgroundColor: Palette1,
-                    }}
-                >
-                    <Profile />
-                    <div
-                        style={{
-                            flexDirection: "row",
-                            backgroundColor: Palette1,
-                        }}
-                    >
-                        <h1 className="blended-text">Hello, I am Tarun</h1>
-                        <p className="blended-text">
-                            The result driven backend developer
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <NavBar />
+            {/* <VerticalSocialBar /> */}
+            <Hero />
+            <Heading label="Experience" />
             <div
                 className="container"
                 style={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: "20px", // spacing between cards
+                    gap: "20px",
                 }}
             >
-                <ExperienceItem />
-                <ExperienceItem />
-                <ExperienceItem />
+                {fetchExperienceData().map((exp, index) => (
+                    <ExperienceCard key={index} experience={exp} />
+                ))}
+            </div>
+            <Heading label="Education" />
+            <div
+                className="container"
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "20px",
+                }}
+            >
+                {fetchEducationData().map((exp, index) => (
+                    <EducationCard key={index} education={exp} />
+                ))}
             </div>
         </div>
     );

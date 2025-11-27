@@ -1,0 +1,58 @@
+/* Navbar default state (hidden visually but still in DOM) */
+.navbar {
+  width: 100%;
+  background: #121212;
+  padding: 14px 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.5s ease;
+}
+
+/* Navbar appears */
+.navbar.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Navbar content */
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00FFFF;
+}
+
+.nav-logo span {
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00FFFF;
+}

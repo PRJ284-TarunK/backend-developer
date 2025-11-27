@@ -1,0 +1,48 @@
+.education-card {
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    max-width: 600px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* --- Header (Degree + Period) --- */
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.degree {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00FFFF;
+}
+
+.period {
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+/* --- College + Location --- */
+.college-location {
+    font-size: 15px;
+    color: #d0d0d0;
+    margin-top: -4px;
+}
+
+/* --- Field of Study --- */
+.field-of-study {
+    font-size: 14px;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-top: 6px;
+}
+
+/* --- Hover Glow Effect (optional but aesthetic) --- */
+.education-card:hover {
+    background: #181818;
+    transition: background 0.3s ease;
+}
