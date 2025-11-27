@@ -1,0 +1,12 @@
+.moving-bg {
+  width: 100%;
+  min-height: 3px; /* change height as needed */
+  background: linear-gradient(90deg, #b44fff, #ff4fd8, #b44fff);
+  background-size: 300% 100%;
+  animation: bgMove 6s linear infinite;
+}
+
+@keyframes bgMove {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}

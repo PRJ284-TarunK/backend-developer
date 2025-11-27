@@ -1,0 +1,1 @@
+export const ProfilePic = require("./images/profile.png")

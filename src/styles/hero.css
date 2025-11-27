@@ -1,0 +1,17 @@
+
+  .moving-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #01257D;
+    /* background: linear-gradient(90deg, #01257D, #00FFFF, #01257D); */
+    background-size: 300% 100%;
+    /* animation: bgMove 6s linear infinite alternate; */
+  }
+  
+  @keyframes bgMove {
+    0%   { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+  }

@@ -1,0 +1,29 @@
+.profile-frame {
+    width: 300px;              /* adjust size */
+    height: 300px;
+    border-radius: 50%;
+    padding: 5px;             /* grey outer border thickness */
+    background: #00FFFF;       /* soft grey outer ring */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-frame-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 3px;              /* black inner border thickness */
+    background: #01257D;          /* black inner ring */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;        /* makes the photo circular */
+    object-fit: cover;
+  }
+  
