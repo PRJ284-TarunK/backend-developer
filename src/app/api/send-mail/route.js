@@ -1,18 +1,16 @@
+
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-module.exports = async (req, res) => {
-    if (req.method !== "POST") {
-        return res.status(405).json({ error: "Method not allowed" });
-    }
-
+export async function POST(req) {
     try {
-        const { name, email, message } = req.body;
+        const body = await req.json();
+        const { name, email, message } = body;
 
         const response = await resend.emails.send({
             from: "Portfolio <onboarding@resend.dev>",
-            to: "your-email@gmail.com",
+            to: "prj284@iitpkd.ac.in",
             subject: `New Message from ${name}`,
             html: `
                 <h2>New Contact Message</h2>
@@ -22,8 +20,8 @@ module.exports = async (req, res) => {
             `,
         });
 
-        return res.status(200).json({ success: true, response });
+        return Response.json({ success: true, response });
     } catch (error) {
-        return res.status(500).json({ success: false, error: error.message });
+        return Response.json({ success: false, error: error.message }, { status: 500 });
     }
-};
+}

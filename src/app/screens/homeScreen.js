@@ -1,3 +1,5 @@
+"use client"
+
 import "../common/styles/themedBg.css";
 import "../common/styles/themedBorder.css";
 import "../styles/hero.css";
